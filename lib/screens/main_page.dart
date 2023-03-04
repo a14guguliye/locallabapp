@@ -1,9 +1,7 @@
 import "package:flutter/material.dart";
-import 'package:flutter/rendering.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:helixapp/screens/analysis_page.dart';
 import 'package:helixapp/universal/bottom_navbar.dart';
-import 'package:helixapp/universal/navbar_item.dart';
 import 'package:helixapp/widgets/main_page/services_card.dart';
 
 class MainPage extends HookWidget {
@@ -43,7 +41,10 @@ class MainPage extends HookWidget {
                                 imagePath: "results.png"),
                           ),
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(
+                                  context, AnalysisPage.routeName);
+                            },
                             child: const ServiceCard(
                                 labelText: "Analiz Goturmek",
                                 imagePath: "take_samples.png"),

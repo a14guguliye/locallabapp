@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../screens/analysis_page.dart';
 import 'navbar_item.dart';
 
 class BottomNavbar extends StatelessWidget {
@@ -20,7 +21,9 @@ class BottomNavbar extends StatelessWidget {
               flex: 1,
               fit: FlexFit.tight,
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, AnalysisPage.routeName);
+                },
                 child: const NavbarItem(
                     assetName: "analysis_tube.svg", labelText: "Analiz vermek"),
               ),
